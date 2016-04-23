@@ -1,1 +1,2 @@
-# very-fishy-app
+# VeryFishyApp
+where fishy things happen

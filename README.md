@@ -1,2 +1,2 @@
 # VeryFishyApp
-# where fishy things happen
+where fishy things happen

@@ -1,1 +1,1 @@
-# very-fishy-app
+# VeryFishyApp

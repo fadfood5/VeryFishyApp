@@ -1,13 +1,13 @@
 // Ionic Starter App
 
-var apiBaseUrl = 'http://localhost:3000/data';
+var apiBaseUrl = 'http://localhost:1337';
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-material'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 
 .run(function($ionicPlatform, $http) {
@@ -35,16 +35,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
-
   .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
+  })
+
+    .state('tab', {
+    url: '/tab',
+    abstract: true,
+    templateUrl: 'templates/tabs.html'
   })
 
   .state('register', {

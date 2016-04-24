@@ -1,5 +1,26 @@
 angular.module('starter.controllers', [])
 
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state, $http) {
+    $scope.data = {};
+
+    $scope.login = function() {
+        LoginService.loginUser({'email': $scope.data.email, 'password': $scope.data.password}).then(function(data) {
+          console.log("Controller says login is a success!");
+          //console.log(JSON.stringify(data.token));
+          $state.go('tab.feeds');
+        }, function(err) {
+          var alertPopup = $ionicPopup.alert({
+              title: 'Login failed!',
+              template: 'Please check your credentials!'
+          });
+        });
+    };
+
+    $scope.register = function() {
+      $state.go('register');
+    };
+})
+
 .controller('FeedsCtrl', function($scope, $http, $state, FeedService) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

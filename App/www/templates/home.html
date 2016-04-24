@@ -1,0 +1,44 @@
+<ion-content>
+  <div id="map" data-tap-disabled="true"></div>
+  <div class="list list-inset">
+    <div class="item item-icon-left item-icon-right">
+      <i ng-click="clickTest()" class="icon ion-android-checkbox-outline-blank"></i> Description 1
+      <i ng-click="clickTest()" class="icon ion-minus"></i>
+    </div>
+    <div class="item item-icon-left item-icon-right">
+      <i ng-click="clickTest()" class="icon ion-android-checkbox-outline-blank"></i> Description 2
+      <i ng-click="clickTest()" class="icon ion-minus"></i>
+    </div>
+    <div class="item item-icon-left item-icon-right">
+      <i ng-click="clickTest()" class="icon ion-android-checkbox-outline"></i> Description 3
+      <i ng-click="clickTest()" class="icon ion-minus"></i>
+    </div>
+  </div>
+</ion-content>
+<ion-footer-bar class="bar-calm">
+  <a ng-click="modal.show()" class="button">Report Item</a>
+  <div class="title">VeryFishyApp</div>
+  <a ng-click="addTrap()" class="button"><i class="icon ion-plus"></i></a>
+</ion-footer-bar>
+
+<!-- google maps javascript -->
+<!-- <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-calm">
+      <h1 class="title">Drop a Trap!</h1>
+      <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+
+        <textarea rows="8">
+        </textarea>
+        <button class="button">Submit</button>
+      </label>
+
+    </ion-content>
+  </ion-modal-view>
+</script> -->

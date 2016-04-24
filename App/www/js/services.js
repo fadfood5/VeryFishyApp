@@ -9,7 +9,7 @@ angular.module('starter.services', [])
           var deferred = $q.defer();
           var promise = deferred.promise;
           $http.post(url, {'email': credentials.email, 'password': credentials.password}).then(function(res) {
-            //console.log(JSON.stringify(res));
+            console.log(JSON.stringify(res));
             if((typeof res.data.token !== 'undefined')) {
               console.log("deferred is RESOLVED");
               deferred.resolve( { token: res.data.token } );
@@ -61,6 +61,4 @@ angular.module('starter.services', [])
           return promise;
         }
     };
-  })
-
-});
+  });
